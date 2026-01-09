@@ -1,0 +1,169 @@
+<section class="collection-hero position-relative overflow-hidden">
+
+    <!-- Background image -->
+    <div class="position-absolute top-0 start-0 w-100 h-100">
+        <img src="/assets/bg-products.jpg" alt="" class="w-100 h-100 object-fit-cover" />
+        <div class="collection-overlay"></div>
+    </div>
+
+    <!-- Glow blobs -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none">
+        <div class="blob blob-amber"></div>
+        <div class="blob blob-forest"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container position-relative z-1 py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+
+                <span class="badge collection-badge mb-4 fade-up delay-0">
+                    Our Collection
+                </span>
+
+                <h1 class="fw-bold display-5 display-md-3 mb-4 fade-up delay-1">
+                    Pure &amp;
+                    <span class="text-gradient-golden">Natural Products</span>
+                </h1>
+
+                <p class="fs-5 lh-lg fade-up delay-2">
+                    Explore our range of authentic dairy products and organic lifestyle
+                    essentials, crafted with care and tradition.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="products-section py-5">
+
+    <div class="container">
+
+        <!-- Tabs -->
+        <div class="d-flex justify-content-center mb-5">
+            <div class="tabs-pill">
+                <button class="tab-btn" [class.active]="activeTab === 'all'" (click)="activeTab = 'all'">
+                    All Products
+                </button>
+                <button class="tab-btn" [class.active]="activeTab === 'dairy'" (click)="activeTab = 'dairy'">
+                    Ulhaan Dairy
+                </button>
+                <button class="tab-btn" [class.active]="activeTab === 'organics'" (click)="activeTab = 'organics'">
+                    Mee Organics
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= ULHAAN DAIRY ================= -->
+        <ng-container *ngIf="activeTab === 'all' || activeTab === 'dairy'">
+
+            <div class="section-header mb-4">
+                <div class="brand-icon dairy">U</div>
+                <div>
+                    <h4 class="fw-bold mb-0">Ulhaan Dairy</h4>
+                    <p class="text-muted mb-0">Premium butter & ghee</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-sm-6 col-lg-4 fade-up" *ngFor="let product of dairyProducts; let i = index"
+                    [style.animationDelay]="i * 100 + 'ms'">
+                    <div class="product-card">
+
+                        <div class="ratio ratio-1x1 position-relative overflow-hidden">
+                            <img [src]="product.image" class="product-img" />
+                            <span class="size-badge">{{ product.size }}</span>
+                        </div>
+
+                        <div class="p-4">
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span *ngFor="let tag of product.tags" class="tag amber">
+                                    {{ tag }}
+                                </span>
+                            </div>
+
+                            <h5 class="fw-semibold mb-2">{{ product.title }}</h5>
+                            <p class="text-muted small mb-3">{{ product.description }}</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₹{{ product.price }}</span>
+                                <button class="btn btn-amber btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+
+        <!-- ================= MEE ORGANICS ================= -->
+        <ng-container *ngIf="activeTab === 'all' || activeTab === 'organics'">
+
+            <div class="section-header mb-4">
+                <div class="brand-icon organics">M</div>
+                <div>
+                    <h4 class="fw-bold mb-0">Mee Organics</h4>
+                    <p class="text-muted mb-0">Natural lifestyle products</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3 fade-up" *ngFor="let product of organicProducts; let i = index"
+                    [style.animationDelay]="i * 100 + 'ms'">
+                    <div class="product-card">
+
+                        <div class="ratio ratio-1x1 position-relative overflow-hidden">
+                            <img [src]="product.image" class="product-img" />
+                            <span class="size-badge">{{ product.size }}</span>
+                        </div>
+
+                        <div class="p-4">
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span *ngFor="let tag of product.tags" class="tag forest">
+                                    {{ tag }}
+                                </span>
+                            </div>
+
+                            <h5 class="fw-semibold mb-2">{{ product.title }}</h5>
+                            <p class="text-muted small mb-3">{{ product.description }}</p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₹{{ product.price }}</span>
+                                <button class="btn btn-forest btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+
+    </div>
+</section>
+
+
+<section class="cta-section py-5 text-center">
+
+    <div class="container">
+
+        <h2 class="fw-bold display-6 mb-3">
+            Can't Find What You're Looking For?
+        </h2>
+
+        <p class="text-muted fs-5 mb-4 mx-auto cta-text">
+            Get in touch with us and we'll help you find the perfect product for your needs.
+        </p>
+
+        <a routerLink="/contact" class="btn btn-amber btn-lg px-5 py-3 cta-btn">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>

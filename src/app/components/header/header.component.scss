@@ -1,0 +1,183 @@
+/* Colors */
+$ivory: #fdfbf6;
+$gold: #d49a3a;
+$gold-dark: #b8822c;
+$text-dark: #2f2a24;
+
+/* Header */
+.bg-ivory {
+    background: $ivory;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop + Tablet */
+.brand-logo {
+    margin-top: 25px;
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Mobile only */
+@media (max-width: 576px) {
+    .brand-logo {
+        height: 140px;
+         margin-top: 15px;
+        /* still big, not tiny */
+    }
+}
+
+
+
+
+/* Nav */
+.nav-item {
+    font-size: 16px;
+    color: #6b6257;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-item.active {
+    color: $gold-dark;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $gold-dark;
+}
+
+/* CTA */
+.btn-cta {
+    background: #f3a82c;
+    border-radius: 12px;
+    border: none;
+    color: #1f1a12;
+}
+
+/* HERO */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../../../assets/hero-dairy.jpg') right center / cover no-repeat;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(253, 251, 246, 0.95) 0%,
+            rgba(253, 251, 246, 0.85) 45%,
+            rgba(253, 251, 246, 0.2) 70%,
+            rgba(253, 251, 246, 0) 100%);
+    z-index: 1;
+}
+
+.hero-section>.container-fluid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Text */
+.hero-title {
+    font-family: serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: $text-dark;
+}
+
+.text-gold {
+    color: $gold;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: #6b6257;
+    max-width: 520px;
+}
+
+/* Badge */
+.badge-soft {
+    background: #f7e6c4;
+    color: $gold-dark;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 999px;
+}
+
+/* Buttons */
+.btn-primary-hero {
+    background: #f3a82c;
+    border-radius: 12px;
+    border: none;
+    color: #1f1a12;
+}
+
+.btn-outline-hero {
+    border: 2px solid $gold;
+    border-radius: 12px;
+    color: $gold-dark;
+    background: transparent;
+}
+
+.bg-cream {
+    background-color: #faf7ef;
+}
+
+/* Icon circle */
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(245, 158, 11, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.icon-wrapper:hover {
+    background-color: rgba(245, 158, 11, 0.3);
+}
+
+.icon {
+    font-size: 2rem;
+    color: #b45309;
+    /* amber-dark */
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

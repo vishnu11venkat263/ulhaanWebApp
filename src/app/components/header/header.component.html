@@ -1,0 +1,39 @@
+<!-- HEADER -->
+<header class="fixed-top bg-ivory border-bottom">
+    <div class="container-fluid px-5">
+        <div class="d-flex align-items-center justify-content-between" style="height: 80px;">
+
+            <!-- Logo -->
+            <div class="brand-container">
+                <img src="assets/ul_logo.png" alt="Ulhaan Logo" class="brand-logo">
+            </div>
+
+
+
+
+            <!-- Nav -->
+            <nav class="d-none d-md-flex gap-5 align-items-center">
+                <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                    class="nav-item">
+                    Home
+                </a>
+
+                <a routerLink="/about" routerLinkActive="active" class="nav-item">
+                    About Us
+                </a>
+
+                <a routerLink="/products" routerLinkActive="active" class="nav-item">
+                    Products
+                </a>
+
+                <a routerLink="/contact" routerLinkActive="active" class="nav-item">
+                    Contact
+                </a>
+            </nav>
+
+
+            <!-- CTA -->
+            <a class="btn btn-cta px-4 py-2 fw-semibold">Get in Touch</a>
+        </div>
+    </div>
+</header>

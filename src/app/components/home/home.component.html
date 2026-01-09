@@ -1,0 +1,179 @@
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="container-fluid px-5 h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-6">
+
+        <span class="badge badge-soft mb-4">
+          Pure • Natural • Authentic
+        </span>
+
+        <h1 class="hero-title mb-4">
+          Experience the <span class="text-gold">Purity</span><br>
+          of Tradition
+        </h1>
+
+        <p class="hero-desc mb-5">
+          Premium dairy products crafted with generations of expertise.
+          Our butter and ghee bring the authentic taste of nature to your table.
+        </p>
+
+        <div class="d-flex gap-4">
+          <a class="btn btn-primary-hero px-4 py-3 fw-semibold" href="/products">
+            Explore Products →
+          </a>
+          <a class="btn btn-outline-hero px-4 py-3 fw-medium" href="/about">
+            Our Story
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-cream">
+  <div class="container">
+    <div class="row g-4 text-center">
+
+      <!-- Feature 1 -->
+      <div class="col-6 col-md-3 fade-up" style="animation-delay: 0ms">
+        <div class="icon-wrapper mx-auto mb-3">
+          <i class="bi bi-leaf icon"></i>
+        </div>
+        <h5 class="fw-semibold">100% Natural</h5>
+        <p class="text-muted small">Pure ingredients sourced from nature</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-6 col-md-3 fade-up" style="animation-delay: 100ms">
+        <div class="icon-wrapper mx-auto mb-3">
+          <i class="bi bi-heart icon"></i>
+        </div>
+        <h5 class="fw-semibold">Made with Love</h5>
+        <p class="text-muted small">
+          Traditional recipes passed through generations
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-6 col-md-3 fade-up" style="animation-delay: 200ms">
+        <div class="icon-wrapper mx-auto mb-3">
+          <i class="bi bi-award icon"></i>
+        </div>
+        <h5 class="fw-semibold">Premium Quality</h5>
+        <p class="text-muted small">
+          Highest standards in every product
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-6 col-md-3 fade-up" style="animation-delay: 300ms">
+        <div class="icon-wrapper mx-auto mb-3">
+          <i class="bi bi-stars icon"></i>
+        </div>
+        <h5 class="fw-semibold">Chemical Free</h5>
+        <p class="text-muted small">
+          No artificial additives or preservatives
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 position-relative overflow-hidden bg-light mee-section">
+
+  <!-- Soft background glow -->
+  <div class="position-absolute glow glow-left"></div>
+  <div class="position-absolute glow glow-right"></div>
+
+  <div class="container position-relative z-1">
+
+    <!-- HERO -->
+    <div class="row justify-content-center align-items-center mb-5">
+
+      <!-- Centered Text -->
+      <div class="col-lg-5 text-center text-lg-start">
+        <span class="badge rounded-pill bg-forest-soft text-forest fw-medium mb-3">
+          Introducing
+        </span>
+
+        <h1 class="fw-bold display-5 mb-3">
+          <span class="text-forest">Mee</span> Organics
+        </h1>
+
+        <p class="text-muted fs-6 mb-4">
+          Embrace the power of nature with our organic lifestyle range.
+          Traditional Ayurvedic formulations for your daily wellness ritual.
+        </p>
+
+        <a routerLink="/products" class="btn btn-forest px-4 py-2 d-inline-flex align-items-center gap-2">
+          View Collection
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Floating Image -->
+      <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0 text-center">
+        <div class="hero-image-wrapper">
+          <img src="assets/mee-organics-hero.jpg" alt="Mee Organics" class="img-fluid rounded-4 shadow-lg" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="row justify-content-center g-4 mt-4">
+
+      <div class="col-6 col-md-3" *ngFor="let product of products">
+        <div class="product-card text-center h-100">
+
+          <div class="product-image mb-3">
+            <img [src]="product.image" [alt]="product.title" class="img-fluid rounded-3" />
+          </div>
+
+          <h6 class="fw-semibold mb-1">{{ product.title }}</h6>
+          <p class="text-muted small mb-0">
+            {{ product.description }}
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section py-5 position-relative overflow-hidden">
+
+  <div class="container text-center position-relative z-1">
+
+    <h2 class="fw-bold display-5 mb-3">
+      Ready to Experience
+      <span class="text-gradient-golden">Natural Goodness</span>?
+    </h2>
+
+    <p class="text-muted fs-5 mb-4 mx-auto cta-text">
+      Join thousands of families who trust Ulhaan for pure, authentic products.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a routerLink="/products" class="btn btn-amber btn-lg px-5 py-3 fw-semibold shadow-soft cta-btn">
+        Shop Now
+      </a>
+
+      <a routerLink="/contact" class="btn btn-outline-primary btn-lg px-5 py-3 fw-medium cta-btn">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+
+</section>

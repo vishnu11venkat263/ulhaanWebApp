@@ -1,0 +1,202 @@
+<section class="contact-hero py-5 position-relative overflow-hidden">
+
+    <div class="position-absolute top-0 start-0 w-100 h-100">
+        <img src="/assets/bg-contacts.jpg" alt="" class="w-100 h-100 object-fit-cover" />
+        <div class="overlay-gradient"></div>
+    </div>
+
+    <!-- Decorative Blobs -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none">
+        <div class="blob blob-amber"></div>
+        <div class="blob blob-forest"></div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+
+                <span class="badge contact-badge mb-4 fade-up delay-0">
+                    Get in Touch
+                </span>
+
+                <h1 class="fw-bold display-5 display-md-4 mb-4 fade-up delay-1">
+                    We'd Love to
+                    <span class="text-gradient-golden">Hear From You</span>
+                </h1>
+
+                <p class="fs-5 lh-lg fade-up delay-2">
+                    Have questions about our products? Want to partner with us?
+                    We're here to help!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="contact-section py-5">
+
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- LEFT : CONTACT INFO -->
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold mb-4">Contact Information</h2>
+
+                <div class="row g-4 mb-5">
+
+                    <!-- Card -->
+                    <div class="col-sm-6" *ngFor="let item of contactInfo; let i = index">
+                        <div class="info-card h-100 fade-up" [style.animationDelay]="i * 0.1 + 's'">
+                            <div class="icon-box mb-3">
+                                <i [class]="item.icon"></i>
+                            </div>
+                            <h6 class="fw-semibold mb-1">{{ item.title }}</h6>
+                            <p class="text-muted small mb-0" *ngFor="let line of item.lines">
+                                {{ line }}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- MAP -->
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2447481505944!2d78.35067731487756!3d17.449570788045887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sHITEC%20City%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1620000000000"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ulhaan Location"></iframe>
+                </div>
+
+            </div>
+
+            <!-- RIGHT : FORM -->
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold mb-4">Send us a Message</h2>
+
+                <form (ngSubmit)="submit()" #contactForm="ngForm">
+
+                    <div class="mb-4">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control custom-input" placeholder="Your name" required ngModel
+                            name="name" />
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control custom-input" placeholder="your@email.com" required
+                                ngModel name="email" />
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control custom-input" placeholder="+91 98765 43210" ngModel
+                                name="phone" />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Message</label>
+                        <textarea rows="6" class="form-control custom-input" placeholder="How can we help you?" required
+                            ngModel name="message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-amber w-100 btn-lg">
+                        Send Message
+                        <i class="bi bi-send ms-2"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="branches-section py-5">
+
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-6 mb-3">Our Branches</h2>
+            <p class="text-muted fs-5 mx-auto branches-subtitle">
+                Visit us at any of our locations across India
+            </p>
+        </div>
+
+        <!-- Branch Cards -->
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-sm-6 col-lg-3 fade-up delay-0">
+                <div class="branch-card h-100">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Hyderabad</h5>
+                    <p class="text-muted small mb-2">
+                        Plot 45, HITEC City, Telangana
+                    </p>
+                    <p class="fw-medium text-primary mb-0">
+                        +91 98765 11111
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 fade-up delay-1">
+                <div class="branch-card h-100">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Bangalore</h5>
+                    <p class="text-muted small mb-2">
+                        MG Road, Karnataka
+                    </p>
+                    <p class="fw-medium text-primary mb-0">
+                        +91 98765 22222
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 fade-up delay-2">
+                <div class="branch-card h-100">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Chennai</h5>
+                    <p class="text-muted small mb-2">
+                        Anna Nagar, Tamil Nadu
+                    </p>
+                    <p class="fw-medium text-primary mb-0">
+                        +91 98765 33333
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 fade-up delay-3">
+                <div class="branch-card h-100">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Mumbai</h5>
+                    <p class="text-muted small mb-2">
+                        Andheri West, Maharashtra
+                    </p>
+                    <p class="fw-medium text-primary mb-0">
+                        +91 98765 44444
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

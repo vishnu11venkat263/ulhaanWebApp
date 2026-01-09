@@ -1,0 +1,354 @@
+/* Section sizing */
+.story-hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+}
+
+/* Background overlay */
+.overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(20, 21, 22, 0.65),
+            rgba(117, 117, 117, 0.55),
+            rgba(137, 143, 144, 0.75));
+}
+
+
+/* Badge */
+.story-badge {
+    background-color: #fde8c8;
+    color: #a16207;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 999px;
+}
+
+/* Gradient text */
+.text-gradient-golden {
+    background: linear-gradient(90deg, #fbbf24, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Decorative blobs */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.8;
+}
+
+.blob-amber {
+    width: 280px;
+    height: 280px;
+    background: rgba(251, 191, 36, 0.2);
+    top: 40px;
+    left: 40px;
+}
+
+.blob-forest {
+    width: 360px;
+    height: 360px;
+    background: rgba(22, 163, 74, 0.15);
+    bottom: 40px;
+    right: 40px;
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-0 {
+    animation-delay: 0.1s;
+}
+
+.delay-1 {
+    animation-delay: 0.25s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive heading */
+@media (min-width: 768px) {
+    .display-md-3 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Section background */
+.farm-section {
+    background-color: #fffdf8;
+}
+
+/* Card container */
+.farm-card {
+    aspect-ratio: 1 / 1;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg,
+            rgba(245, 158, 11, 0.25),
+            rgba(47, 111, 78, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    max-width: 480px;
+}
+
+/* Inner content */
+.farm-card-inner {
+    padding: 3rem;
+}
+
+/* Brand circle */
+.brand-circle-lg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.brand-circle-lg span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Decorative blurs */
+.blur-accent {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.blur-top {
+    top: -20px;
+    right: -20px;
+    background-color: rgba(245, 158, 11, 0.35);
+}
+
+.blur-bottom {
+    bottom: -30px;
+    left: -30px;
+    background-color: rgba(47, 111, 78, 0.25);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+    .farm-card {
+        max-width: 380px;
+    }
+}
+
+/* Section background */
+.our-values-section {
+    background-color: #faf7f1;
+    /* cream */
+}
+
+/* Subtitle width */
+.values-subtitle {
+    max-width: 640px;
+}
+
+/* Card */
+.value-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon box */
+.icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 0.75rem;
+    background-color: rgba(245, 158, 11, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+    color: #b45309;
+    /* amber-dark */
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Section */
+.journey-section {
+    background-color: #fffdf8;
+}
+
+/* Subtitle */
+.journey-subtitle {
+    max-width: 640px;
+}
+
+/* Timeline wrapper */
+.timeline {
+    max-width: 720px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Center vertical line */
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #e5e1da;
+    transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Reverse for alternating sides */
+.timeline-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Dot (year badge) */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+    z-index: 2;
+}
+
+/* Content card */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    width: 45%;
+}
+
+/* Alignment */
+.timeline-item:not(.reverse) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.timeline-item.reverse .timeline-content {
+    margin-left: auto;
+    padding-left: 2rem;
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+    .timeline {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-line {
+        left: 32px;
+    }
+
+    .timeline-item,
+    .timeline-item.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-dot {
+        left: 32px;
+        transform: none;
+    }
+
+    .timeline-content {
+        width: 100%;
+        margin-left: 4.5rem !important;
+        text-align: left !important;
+        padding: 1.5rem;
+    }
+}

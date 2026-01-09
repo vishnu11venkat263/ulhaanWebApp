@@ -1,0 +1,146 @@
+/* Section spacing */
+.mee-section {
+  min-height: 100vh;
+}
+
+
+/* Section background */
+.cta-section {
+  background: linear-gradient(180deg, #fffaf2 0%, #fffdf8 100%);
+}
+
+/* Text width */
+.cta-text {
+  max-width: 640px;
+}
+
+/* Golden gradient text */
+.text-gradient-golden {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Amber button */
+.btn-amber {
+  background-color: #f59e0b;
+  color: #111;
+  border-radius: 0.75rem;
+}
+
+.btn-amber:hover {
+  background-color: #d97706;
+  color: #111;
+}
+
+/* Button hover effects */
+.cta-btn {
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Soft shadow */
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Colors */
+.bg-earth {
+  background-color: #5a412e;
+}
+
+.text-cream {
+  color: #f7f3ed;
+}
+
+.text-cream-muted {
+  color: rgba(247, 243, 237, 0.7);
+}
+
+.text-cream-faint {
+  color: rgba(247, 243, 237, 0.5);
+}
+
+.text-amber {
+  color: #f59e0b;
+}
+
+/* Brand circle */
+.brand-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a2a1c;
+  font-size: 1.25rem;
+}
+
+/* Links */
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(247, 243, 237, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f59e0b;
+}
+
+/* Contact */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: rgba(247, 243, 237, 0.7);
+}
+
+.footer-contact i {
+  margin-top: 0.15rem;
+}
+
+/* Social icons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(247, 243, 237, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f7f3ed;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f59e0b;
+  color: #3a2a1c;
+}
+
+/* Divider */
+.footer-divider {
+  border-color: rgba(247, 243, 237, 0.1);
+}
+
+/* Legal links */
+.footer-legal {
+  color: rgba(247, 243, 237, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal:hover {
+  color: #f59e0b;
+}
+
+
